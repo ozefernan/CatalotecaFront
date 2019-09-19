@@ -10,7 +10,7 @@ export default function navbar() {
         <Nav as={Row}>
           <Col xs={12} sm={3} md={3}>
             <Nav.Item>
-              <Navbar.Brand href="#" ><img src={catalotecaLogo} alt="Logo Cataloteca"/></Navbar.Brand>
+              <Navbar.Brand href="#" ><img src={catalotecaLogo} alt="Logo Catalotecaa"/></Navbar.Brand>
             </Nav.Item>
           </Col>
           <Col xs={12} sm={6} md={7}>
