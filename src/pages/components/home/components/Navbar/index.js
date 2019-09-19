@@ -1,7 +1,7 @@
 import React from 'react';
 import { Styles } from './styles';
 import { Navbar, Nav, Form, FormControl, Button, Container, Row, Col, Header} from 'react-bootstrap';
-import catalotecaLogo from '../../../../images/cataloteca-logo.svg';
+import catalotecaLogo from '../../../../../shared/images/cataloteca-logo.svg';
 
 export default function navbar() {
   return (

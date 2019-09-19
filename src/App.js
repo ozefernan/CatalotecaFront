@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './shared/components/home/components/Navbar';
+import Navbar from '../src/pages/components/home/components/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
