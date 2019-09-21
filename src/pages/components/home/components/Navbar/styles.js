@@ -37,12 +37,12 @@ export const Styles = styled.div`
     line-height: 1.5;
     border-radius: 6px;
     color: #555;
-    background: #f9f9f9; 
+    background: #f9f9f9;
     border: 1px solid #ececec;
     display: inline-block;
     box-shadow: none;
-  }  
-  
+  }
+
   .btn-search-form {
     margin-top: 0;
     height: 47px;
@@ -50,9 +50,26 @@ export const Styles = styled.div`
     margin-left: 1em;
     background-color: #FF6F5A;
   }
-  
+
   .btn-primary:hover{
 
+  }
+
+  .header {
+    height: 61;
+    background: #f9f9f9;
+    border-top: 1px solid #e6ecf1;
+    border-bottom: 1px solid #e6ecf1;
+  }
+
+  .navbar-default {
+    background-color: rgba(0,0,0,0);
+    border-color: rgba(0,0,0,0);
+  }
+
+  .header .navbar-default {
+    margin-bottom: 0;
+    border: none;
   }
 
   img {
