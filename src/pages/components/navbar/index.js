@@ -1,7 +1,7 @@
 import React from 'react';
 import { Styles } from './styles';
-import { Navbar, Nav, Form, FormControl, Button, Container, Row, Col} from 'react-bootstrap';
-import catalotecaLogo from '../../../../../shared/images/cataloteca-logo.svg';
+import { Navbar, Nav, Form, FormControl, Button, Container, Row, Col } from 'react-bootstrap';
+import catalotecaLogo from '../../../shared/images/cataloteca-logo.svg';
 
 export default function navbar() {
   return (
@@ -33,16 +33,6 @@ export default function navbar() {
           </Col>
         </Nav>
       </Container>
-      <header>
-        <Container>
-          <Row>
-            <Col xs={12} sm={12} md={12}>
-              <Nav.Item >Todas as categorias
-              </Nav.Item>
-            </Col>
-          </Row>
-        </Container>
-      </header>
     </Styles>
   );
 }

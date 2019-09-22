@@ -15,9 +15,8 @@ export default createGlobalStyle`
   }
 
   body {
-    font: 'Rubik', sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
+    font: 14px 'Rubik', sans-serif !important;
+    line-height: 1.5 !important;
     color: #9091AF;
     background-color: #fff;
   }
@@ -26,4 +25,10 @@ export default createGlobalStyle`
     list-style: none;
   }
 
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #22144A;
+  }
 `;

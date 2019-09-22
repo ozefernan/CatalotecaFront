@@ -6,6 +6,16 @@ export const Styles = styled.div`
   box-sizing: border-box;
   margin: 5px 0;
 
+
+  .navpesquisa a {
+    color: #9091AF;
+    font-weight: 400;
+    padding-left: 1em;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+  }
+
   .navpesquisa {
     padding: 2em 0;
     background-color: #ffffff;
@@ -53,23 +63,6 @@ export const Styles = styled.div`
 
   .btn-primary:hover{
 
-  }
-
-  .header {
-    height: 61;
-    background: #f9f9f9;
-    border-top: 1px solid #e6ecf1;
-    border-bottom: 1px solid #e6ecf1;
-  }
-
-  .navbar-default {
-    background-color: rgba(0,0,0,0);
-    border-color: rgba(0,0,0,0);
-  }
-
-  .header .navbar-default {
-    margin-bottom: 0;
-    border: none;
   }
 
   img {
