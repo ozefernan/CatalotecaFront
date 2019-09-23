@@ -42,7 +42,7 @@ export const Styles = styled.div`
     padding-right: 5px;
   }
 
-  footer .footer-dados-contato .footer-menu-social .footer-menu-social-item-facebook {
+  footer .footer-dados-contato .footer-menu-social .footer-menu-social-item {
     padding-right: 2em;
   }
 
@@ -53,5 +53,9 @@ export const Styles = styled.div`
   footer .footer-logo img {
     max-width: 235px;
     height: auto;
+  }
+
+  span {
+    padding-left: 0.5em;
   }
 `;

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Styles } from './styles';
 import { Container, Row, Col} from 'react-bootstrap';
-import catalotecaLogo from '../../../shared/images/cataloteca-logo.svg';
-import { IoLogoFacebook } from "react-icons/io";
+import LogoBlue from '../../../shared/images/logoBlue.svg';
+import { IoLogoFacebook, IoLogoTwitter } from "react-icons/io";
 
 export default function footer() {
   return (
@@ -39,15 +39,17 @@ export default function footer() {
                     Alameda Mamoré, 911 - Alphaville Industrial, Barueri - SP, 06454-040
                   </a>
                 </p>
-                <ul className="list-inline footer-menu-social">
-                  <li className="footer-menu-social-item-facebook">
+                <ul className="list-inline footer-menu-social" title="Visite nossa página no Twitter">
+                  <li className="footer-menu-social-item">
                     <a href="#" title="Visite nossa página no Facebook">
-                      <img src={IoLogoFacebook} alt="LogoFacebook"/> Cataloteca
+                      <IoLogoFacebook size={30} color="#ff6f5a" tilte="Icone Facebook" />
+                      <span>Cataloteca</span>
                     </a>
                   </li>
-                  <li className="footer-menu-social-item-facebook" title="Visite nossa página no Facebook">
+                  <li className="footer-menu-social-item" title="Visite nossa página no Facebook">
                     <a href="#" title="Siga-nos no Twitter">
-                      <img src="" alt="LogoInstargram"/> Cataloteca
+                      <IoLogoTwitter size={30} color="#ff6f5a" tilte="Icone Twitter" />
+                      <span>Cataloteca</span>
                     </a>
                   </li>
                   <li></li>
@@ -57,7 +59,7 @@ export default function footer() {
             <Col xs={12} sm={12} md={12}>
               <div className="footer-logo">
                 <a href="#" title="Cataloteca">
-                  <img src={catalotecaLogo} alt="LogoCataloteca"/>
+                  <img src={LogoBlue} alt="LogoCataloteca"/>
                 </a>
               </div>
             </Col>

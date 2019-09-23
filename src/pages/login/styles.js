@@ -64,7 +64,7 @@ export const Styles = styled.div`
     box-shadow: none;
   }
 
-  button {
+  .button {
     color: #fff;
     font-size: 16px;
     background: #ff6f5a;
@@ -74,13 +74,17 @@ export const Styles = styled.div`
     width: 100%;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  button {
+  .button {
   box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 5px 20px 0 rgba(0,0,0,0.19);
   }
 
-  button:hover {
+  .button:hover {
     background-color: #F7582C; /* Green */
     color: white;
   }
@@ -92,7 +96,7 @@ export const Styles = styled.div`
     width: 100%;
   }
 
-  a {
+  a > .cadastro {
     font-size: 15px;
     font-weight: bold;
     color: #333 !important;

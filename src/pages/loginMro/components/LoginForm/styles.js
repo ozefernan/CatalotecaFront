@@ -133,7 +133,7 @@ export const Styles = styled.div`
   }
 
   @media (min-width: 992px), col-md-offset-1 {
-      margin-left: 8.33333%;
+    margin-left: 8.33333%;
   }
 
   .s-login .item-distribuidor .item-distribuidor-b-conteudo .h4 {
