@@ -10,7 +10,9 @@ export default function homeAdmin() {
     <Styles>
       <div id="wrapper">
         <Sidebar />
-        <Topbar />
+        <div id="content-wrapper">
+          <Topbar />
+        </div>
       </div>
       <Footer />
       <Scrolltop />
