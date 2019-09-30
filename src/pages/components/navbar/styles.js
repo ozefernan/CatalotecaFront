@@ -2,41 +2,24 @@ import styled from 'styled-components';
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button} from 'react-bootstrap';
 
 export const Styles = styled.div`
-  display: inline;
-  box-sizing: border-box;
-  margin: 5px 0;
-
-
-  .navpesquisa a {
-    color: #9091AF;
-    font-weight: 400;
-    padding-left: 1em;
-    -webkit-transition: 0.2s;
-    -o-transition: 0.2s;
-    transition: 0.2s;
-  }
-
-  .navpesquisa {
+  .c-menu-pesquisa {
     padding: 2em 0;
-    background-color: #ffffff;
   }
 
-  .navpesquisa .form-inline .form-control {
-    width: 85%;
-    margin-left: 0;
+  .c-menu-pesquisa a {
+    color: #9091AF;
+    text-decoration: none;
+    background-color: transparent;
   }
 
-  .nav {
-    display: flex;
-    flex-wrap: wrap;
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
+  .c-menu-pesquisa .c-menu-pesquisa-menu {
+    padding-top: 7px;
   }
 
-  .row .nav {
-    margin-left: -15px;
-    margin-right: -15px;
+  .img-logo {
+    margin-top: 7px;
+    max-width: 235px;
+    height: auto;
   }
 
   .form-control {
@@ -50,6 +33,7 @@ export const Styles = styled.div`
     background: #f9f9f9;
     border: 1px solid #ececec;
     display: inline-block;
+    vertical-align: middle;
     box-shadow: none;
   }
 
@@ -59,25 +43,18 @@ export const Styles = styled.div`
     width: 52px;
     margin-left: 1em;
     background-color: #FF6F5A;
+    border-radius: 6px;
   }
 
-  .btn-primary:hover{
-
+  .btn-search-form:hover {
+    background-color: #F7582C;
   }
 
-  img {
-    max-width: 235px;
-    height: auto;
-  }
-/*
-  .form-inline {
-    width: 100%;
-    -webkit-appearance: none;
-    box-sizing: border-box
+  .pull-right {
+    float: right !important;
   }
 
-  .mr-auto {
-    text-justify: left;
+  .active {
+    color: #F7582C !important;
   }
-*/
 `;

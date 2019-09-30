@@ -24,7 +24,7 @@ export default function sideBar() {
           </div>
         </li>
         <li className="nav-item text-center">
-          <a href="" title="Upload de produtos">
+          <a href="/upload" title="Upload de produtos">
             <Button className="btn btn-sidebar-upload">
               <MdCloudUpload className="sidebar-icon" size={20} color="#FFF" alt="Ícone de upload"/>
               <span className="sidebar-link">Upload de produtos</span>

@@ -24,12 +24,4 @@ export const Styles = styled.div`
   #wrapper #content-wrapper #content {
     flex: 1 0 auto;
   }
-
-  .flex-column {
-    flex-direction: column!important;
-  }
-
-  .d-flex {
-    display: flex!important;
-  }
 `;

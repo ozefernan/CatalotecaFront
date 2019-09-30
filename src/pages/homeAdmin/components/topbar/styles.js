@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 export const Styles = styled.div`
-  #content {
-    flex: 1 0 auto;
+  a {
+    color: #ff6f5a;
+    text-decoration: none;
   }
 
   .flex-column {
@@ -38,5 +39,48 @@ export const Styles = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: .5rem 1rem;
+  }
+
+  .topbar #sidebarToggleTop {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .btn.btn-link {
+    color: #ff6f5a;
+  }
+
+  .mr-3, .mx-3 {
+    margin-right: 1rem!important;
+  }
+
+  .rounded-circle {
+    border-radius: 50%!important;
+  }
+
+  .btn-link {
+    font-weight: 400;
+    color: #4e73df;
+    text-decoration: none;
+  }
+
+  .btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #858796;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .35rem;
+    transition: color .15s
+  }
+
+  .topbar-link-acesse {
+    padding-left: .7em;
   }
 `;

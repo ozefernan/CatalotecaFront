@@ -12,6 +12,7 @@ export const Styles = styled.div`
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
+    height: 100%;
   }
 
   .sidebar-default {

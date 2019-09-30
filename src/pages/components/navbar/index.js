@@ -1,38 +1,43 @@
 import React from 'react';
 import { Styles } from './styles';
 import { Navbar, Nav, Form, FormControl, Button, Container, Row, Col } from 'react-bootstrap';
+import { MdSearch } from 'react-icons/md';
 import LogoBlue from '../../../shared/images/logoBlue.svg';
 
 export default function navbar() {
   return (
     <Styles>
-      <Container className="navpesquisa">
-        <Nav as={Row}>
-          <Col xs={12} sm={3} md={3}>
-            <Nav.Item>
-              <Navbar.Brand href="#" ><img src={LogoBlue} alt="Logo Catalotecaa"/></Navbar.Brand>
-            </Nav.Item>
-          </Col>
-          <Col xs={12} sm={6} md={7}>
-            <Nav.Item>
-              <Form inline>
-                <FormControl className="input" type="text" placeholder="Pesquise por produtos, marca ou características..." />
-                <Button variant="search-form"></Button>
-              </Form>
-            </Nav.Item>
-          </Col>
-          <Col xs={12} sm={3} md={1}>
-            <Nav.Item>
-              <Nav.Link href="/cadastro">Cadastro</Nav.Link>
-            </Nav.Item>
-          </Col>
-          <Col xs={12} sm={3} md={1}>
-            <Nav.Item>
-              <Nav.Link href="/login">Login</Nav.Link>
-            </Nav.Item>
-          </Col>
-        </Nav>
-      </Container>
+      <div className="c-menu-pesquisa">
+        <Container>
+          <Row>
+            <Col xs={12} sm={3} md={3}>
+              <Nav.Item className="Logo">
+                <a href="/" title="Cataloteca">
+                  <img className="img-logo" src={LogoBlue} alt="Cataloteca"/>
+                </a>
+              </Nav.Item>
+            </Col>
+            <Col xs={12} sm={6} md={7}>
+              <Nav.Item>
+                <Form inline method="get">
+                  <FormControl className="input" type="text" placeholder="Pesquise por produtos, marca ou características..." />
+                  <Button variant="search-form"><MdSearch size={28}color="#fff"/></Button>
+                </Form>
+              </Nav.Item>
+            </Col>
+            <Col xs={12} sm={3} md={2}>
+              <Nav className="list-inline pull-right c-menu-pesquisa-menu">
+                <Nav.Item>
+                  <Nav.Link href="/cadastro">Cadastro</Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link className="active" href="/login">Login</Nav.Link>
+                </Nav.Item>
+              </Nav>
+            </Col>
+          </Row>
+        </Container>
+      </div>
     </Styles>
   );
 }

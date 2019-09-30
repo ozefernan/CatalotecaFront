@@ -2,8 +2,10 @@ import styled from 'styled-components';
 
 export const Styles = styled.div`
   .s-login {
-    background-color: #22144a;
+    background: rgb(73,67,180);
+    background: linear-gradient(190deg, rgba(73,67,180,1) 27%, rgba(34,20,74,1) 100%);
   }
+
   .container {
     display: flex;
     align-items: center;
