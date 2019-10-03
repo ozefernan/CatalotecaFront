@@ -1,10 +1,11 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Home from '../src/pages/home';
-import login from '../src/pages/login';
-import loginMro from '../src/pages/loginMro';
-import HomeAdmin from '../src/pages/homeAdmin';
-import Upload from '../src/pages/upload';
+import Home from './pages/home';
+import login from './pages/login';
+import loginMro from './pages/loginMro';
+import HomeAdmin from './pages/homeAdmin';
+import Upload from './pages/upload';
+import Dashboard from "./pages/dashboard";
 
 
 const Routes = () => (
@@ -15,6 +16,7 @@ const Routes = () => (
       <Route exact path="/admin/login" component={login} />
       <Route exact path="/admin" component={HomeAdmin} />
       <Route exact path="/upload" component={Upload} />
+      <Route exact path="/dashboard" component={Dashboard} />
     </Switch>
   </BrowserRouter>
 );

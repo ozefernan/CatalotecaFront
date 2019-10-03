@@ -11,9 +11,13 @@ export default createGlobalStyle`
   }
 
   body {
-    font: 15px 'Rubik', sans-serif !important;
-    line-height: 1.5 !important;
-    color: #9091AF;
+    margin: 0;
+    font-family: Rubik,sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #858796;
+    text-align: left;
     background-color: #fff;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;

@@ -57,4 +57,5 @@ export const Styles = styled.div`
   .active {
     color: #F7582C !important;
   }
+
 `;

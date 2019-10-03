@@ -1,17 +1,25 @@
 import React, { Component } from 'react';
 import { Styles, DropContainer, UploadMessage } from './styles';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 import { MdCloudUpload } from "react-icons/md";
 import Dropzone from 'react-dropzone';
 
+
 export default class uploadCard extends Component {
-  renderDragMessage = (isDragActive, isDragReject) => {
-    if(!isDragActive) {
+  renderDragMessage = (isDragActive, isDragReject, file, files) => {
+    if(!!file) {
       return <UploadMessage>
-        <MdCloudUpload size={50} color="#ff6f5a" alt="Ícone de upload"/>
-        <p>Solte o arquivo em qualquer lugar desta tela ou
-        <a href="#"> faça upload</a></p>
-      </UploadMessage>
+            <MdCloudUpload size={50} color="#ff6f5a" alt="Ícone de upload"/>
+            Arquivo {files.value}
+            </UploadMessage>
+    }
+
+    if(!isDragActive) {
+      return  <UploadMessage>
+              <MdCloudUpload size={50} color="#ff6f5a" alt="Ícone de upload"/>
+              <p>Solte o arquivo em qualquer lugar desta tela ou
+              <a href="#"> faça upload</a></p>
+              </UploadMessage>
     }
 
     if(isDragReject) {
@@ -26,7 +34,12 @@ export default class uploadCard extends Component {
               Solte o arquivo em qualquer lugar
             </UploadMessage>
   }
+
   render() {
+    const { onUpload } = this.props;
+    const { files } = this.props;
+    const { file } = this.props;
+
     return (
       <Styles>
         <Container fluid>
@@ -92,7 +105,7 @@ export default class uploadCard extends Component {
                   <Card.Body>
                     <div className="d-flex flex-row">
                       <Col xs={12} className="justify-content-center">
-                          <Dropzone accept="image/*" onDropAccepted={() => {}}>
+                          <Dropzone accept="image/*" onDropAccepted={onUpload} file={file} files={files}>
                             { ({ getRootProps, getInputProps, isDragActive, isDragReject }) =>
                               (
                               <DropContainer
@@ -101,7 +114,7 @@ export default class uploadCard extends Component {
                                 isDragReject={isDragReject}
                               >
                                 <input {...getInputProps()} />
-                                {this.renderDragMessage(isDragActive, isDragReject)}
+                                {this.renderDragMessage(isDragActive, isDragReject, file, files)}
                               </DropContainer>
                               )}
                           </Dropzone>
@@ -123,3 +136,4 @@ export default class uploadCard extends Component {
     );
   }
 }
+
