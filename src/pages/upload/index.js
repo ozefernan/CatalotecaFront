@@ -4,7 +4,6 @@ import filesize from 'filesize';
 import api from "../../shared/services/api";
 
 import { Styles } from './styles';
-
 import Sidebar from '../homeAdmin/components/sideBar';
 import Topbar from '../homeAdmin/components/topbar';
 import Footer from '../components/footer';
@@ -17,21 +16,10 @@ export default class upload extends Component {
   };
 
   handleUpload = files => {
-    const uploadedFiles = files.map(file => ({
-      file,
-      //id: uniqueId(),
-      name: file.name,
-      readableSize: filesize(file.size),
-      progress: 0,
-      uploaded: false,
-      error: false,
-      url: null,
-    }))
-
-    this.setState ({
+    /*this.setState ({
       uploadedFiles: this.state.uploadedFiles.concat(uploadedFiles)
-    });
-    uploadedFiles.forEach(this.processUpload);
+    });*/
+    files.forEach(this.processUpload);
   };
 
   /*updateFile = (data) => {
@@ -44,21 +32,26 @@ export default class upload extends Component {
     });
   };*/
 
-  processUpload = uploadedFile => {
+  processUpload = files => {
+
     const data = new FormData();
+    data.append('file', files);
 
     api.post("upload", data, {
-        onUploadProgress: e => {
+      headers: {
+        'Content-Type': 'multipart/form-data'
+      }
+        /*onUploadProgress: e => {
           const progress = parseInt(Math.round((e.loaded * 100) / e.total));
 
           this.updateFile(uploadedFile.data, {
             progress
           });
-        }
+        }*/
       })
       .then(response => {
-        /*this.processCalculate(data)*/
-        console.log(response)
+        this.processCalculate(response);
+
       })
       .catch(error => {
         console.log(error)
@@ -68,17 +61,16 @@ export default class upload extends Component {
       })
   };
 
-  /*processCalculate = data => {
-    const data1 = new FormData();
-
-    api.post("upload", data1, {
-
+  processCalculate = response => {
+    api.post("similarity", response.data, {
     })
-
     .then(response => {
-      console.log(response)
+      console.log(response);
     })
-  }*/
+    .catch(error => {
+      console.log(error)
+    })
+  }
 
   render () {
     const { uploadedFiles } = this.state;

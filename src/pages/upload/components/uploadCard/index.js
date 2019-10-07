@@ -10,7 +10,7 @@ export default class uploadCard extends Component {
     if(!!file) {
       return <UploadMessage>
             <MdCloudUpload size={50} color="#ff6f5a" alt="Ícone de upload"/>
-              Arquivo {files.value}
+              Arquivo {files.name}
             </UploadMessage>
     }
 
