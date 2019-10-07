@@ -105,7 +105,13 @@ export default class uploadCard extends Component {
                   <Card.Body>
                     <div className="d-flex flex-row">
                       <Col xs={12} className="justify-content-center">
-                          <Dropzone accept="" onDropAccepted={onUpload} file={file} files={files}>
+                          <Dropzone 
+                            onDrop={acceptedFiles => console.log(acceptedFiles)}
+                            onDropAccepted={onUpload} 
+                            file={file} 
+                            files={files}
+                            accept=""
+                          >
                             { ({ getRootProps, getInputProps, isDragActive, isDragReject }) =>
                               (
                               <DropContainer

@@ -32,10 +32,9 @@ export default class upload extends Component {
     });
   };*/
 
-  processUpload = files => {
-
+  processUpload = file => {
     const data = new FormData();
-    data.append('file', files);
+    data.append('file', file);
 
     api.post("upload", data, {
       headers: {
