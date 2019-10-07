@@ -48,13 +48,13 @@ export default class upload extends Component {
     const data = new FormData();
 
     api.post("upload", data, {
-        /*onUploadProgress: e => {
+        onUploadProgress: e => {
           const progress = parseInt(Math.round((e.loaded * 100) / e.total));
 
           this.updateFile(uploadedFile.data, {
             progress
           });
-        }*/
+        }
       })
       .then(response => {
         /*this.processCalculate(data)*/
