@@ -19,7 +19,7 @@ export default class upload extends Component {
   handleUpload = files => {
     const uploadedFiles = files.map(file => ({
       file,
-      id: uniqueId(),
+      //id: uniqueId(),
       name: file.name,
       readableSize: filesize(file.size),
       progress: 0,
@@ -34,43 +34,51 @@ export default class upload extends Component {
     uploadedFiles.forEach(this.processUpload);
   };
 
-  updateFile = (id, data) => {
+  /*updateFile = (data) => {
     this.setState({
       uploadedFiles: this.state.uploadedFiles.map(uploadedFile => {
-        return id === uploadedFile.id
+        return data === uploadedFile.data
           ? { ...uploadedFile, ...data }
           : uploadedFile;
       })
     });
-  };
+  };*/
 
   processUpload = uploadedFile => {
     const data = new FormData();
 
-    data.append("file", uploadedFile.file, uploadedFile.name);
-
-    api.post("posts", data, {
-        onUploadProgress: e => {
+    api.post("upload", data, {
+        /*onUploadProgress: e => {
           const progress = parseInt(Math.round((e.loaded * 100) / e.total));
 
-          this.updateFile(uploadedFile.id, {
+          this.updateFile(uploadedFile.data, {
             progress
           });
-        }
+        }*/
       })
       .then(response => {
-        this.updateFile(uploadedFile.id, {
-          uploaded: true,
-          id: response.data._id,
-          url: response.data.url
-        });
+        /*this.processCalculate(data)*/
+        console.log(response)
       })
-      .catch(() => {
-        this.updateFile(uploadedFile.id, {
+      .catch(error => {
+        console.log(error)
+        /*this.updateFile(uploadedFile.id, {
           error: true
-        });
-      });
+        });*/
+      })
   };
+
+  /*processCalculate = data => {
+    const data1 = new FormData();
+
+    api.post("upload", data1, {
+
+    })
+
+    .then(response => {
+      console.log(response)
+    })
+  }*/
 
   render () {
     const { uploadedFiles } = this.state;

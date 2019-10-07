@@ -10,7 +10,7 @@ export default class uploadCard extends Component {
     if(!!file) {
       return <UploadMessage>
             <MdCloudUpload size={50} color="#ff6f5a" alt="Ícone de upload"/>
-            Arquivo {files.value}
+              Arquivo {files.value}
             </UploadMessage>
     }
 
@@ -105,7 +105,7 @@ export default class uploadCard extends Component {
                   <Card.Body>
                     <div className="d-flex flex-row">
                       <Col xs={12} className="justify-content-center">
-                          <Dropzone accept="image/*" onDropAccepted={onUpload} file={file} files={files}>
+                          <Dropzone accept="" onDropAccepted={onUpload} file={file} files={files}>
                             { ({ getRootProps, getInputProps, isDragActive, isDragReject }) =>
                               (
                               <DropContainer
