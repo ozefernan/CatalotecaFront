@@ -7,14 +7,27 @@ import Topbar from '../homeAdmin/components/topbar';
 import Footer from '../components/footer';
 import Scrolltop from '../components/scrollTop';
 import Upload from './components/uploadCard';
+import Dashboard from './components/dashboard';
 
 export default class upload extends Component {
-  state = {
-    uploadedFiles: [],
+  constructor(props) {
+    super(props);
+    this.state = {
+      result: 0
+    }
+  }
+
+  async componentDidMount() {
+  }
+
+  handleUpload = (files) => {
+    files.forEach(this.processUpload);
   };
 
-  handleUpload = files => {
-    files.forEach(this.processUpload);
+  updateResult = (data) => {
+    this.setState({
+      result: data
+    });
   };
 
   processUpload = files => {
@@ -26,8 +39,7 @@ export default class upload extends Component {
         'Content-Type': 'multipart/form-data'
       }})
       .then(response => {
-        console.log(response);
-        response = this.props;
+        this.updateResult(response.data)
       })
       .catch(error => {
         console.log(error)
@@ -35,8 +47,7 @@ export default class upload extends Component {
   };
 
   render () {
-    const { uploadedFiles } = this.state;
-    const length = uploadedFiles.length;
+    const { result } = this.state;
 
     return (
       <Styles>
@@ -45,7 +56,10 @@ export default class upload extends Component {
           <div id="content-wrapper" className="d-flex flex-column">
             <div is="content">
               <Topbar />
-              <Upload onUpload={this.handleUpload} files={uploadedFiles} file={length}/>
+              { !!result ?
+                  <Dashboard result={result}/>
+                : <Upload onUpload={this.handleUpload}/>
+              }
             </div>
           </div>
         </div>

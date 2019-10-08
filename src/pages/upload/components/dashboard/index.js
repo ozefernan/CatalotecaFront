@@ -1,13 +1,22 @@
 import React, { Component } from 'react';
+import api from '../../../../shared/services/api'
+
 import { Container, Row, Col, Card, Table } from 'react-bootstrap';
 import { Styles } from './styles';
 
+
 export default class dashboard extends Component {
-  criatePrimaryTable = () => {
-
+  async componentDidMount() {
+    const result = this.props.result;
+    api.post("products/similarity", result, {
+    })
+    .then(response => {
+      console.log(response)
+    })
+    .catch(error => {
+      console.log(error)
+    })
   }
-
-  criateSecundeTable = () => {}
 
   render() {
     return (
