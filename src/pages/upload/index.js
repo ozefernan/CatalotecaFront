@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { uniqueId } from 'lodash';
-import filesize from 'filesize';
 import api from "../../shared/services/api";
 
 import { Styles } from './styles';
@@ -9,28 +7,28 @@ import Topbar from '../homeAdmin/components/topbar';
 import Footer from '../components/footer';
 import Scrolltop from '../components/scrollTop';
 import Upload from './components/uploadCard';
+import Dashboard from './components/dashboard';
 
 export default class upload extends Component {
-  state = {
-    uploadedFiles: [],
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      result: 0
+    }
+  }
 
-  handleUpload = files => {
-    /*this.setState ({
-      uploadedFiles: this.state.uploadedFiles.concat(uploadedFiles)
-    });*/
+  async componentDidMount() {
+  }
+
+  handleUpload = (files) => {
     files.forEach(this.processUpload);
   };
 
-  /*updateFile = (data) => {
+  updateResult = (data) => {
     this.setState({
-      uploadedFiles: this.state.uploadedFiles.map(uploadedFile => {
-        return data === uploadedFile.data
-          ? { ...uploadedFile, ...data }
-          : uploadedFile;
-      })
+      result: data
     });
-  };*/
+  };
 
   processUpload = file => {
     const data = new FormData();
@@ -39,41 +37,17 @@ export default class upload extends Component {
     api.post("upload", data, {
       headers: {
         'Content-Type': 'multipart/form-data'
-      }
-        /*onUploadProgress: e => {
-          const progress = parseInt(Math.round((e.loaded * 100) / e.total));
-
-          this.updateFile(uploadedFile.data, {
-            progress
-          });
-        }*/
-      })
+      }})
       .then(response => {
-        this.processCalculate(response);
-
+        this.updateResult(response.data)
       })
       .catch(error => {
         console.log(error)
-        /*this.updateFile(uploadedFile.id, {
-          error: true
-        });*/
       })
   };
 
-  processCalculate = response => {
-    api.post("similarity", response.data, {
-    })
-    .then(response => {
-      console.log(response);
-    })
-    .catch(error => {
-      console.log(error)
-    })
-  }
-
   render () {
-    const { uploadedFiles } = this.state;
-    const length = uploadedFiles.length;
+    const { result } = this.state;
 
     return (
       <Styles>
@@ -82,7 +56,10 @@ export default class upload extends Component {
           <div id="content-wrapper" className="d-flex flex-column">
             <div is="content">
               <Topbar />
-              <Upload onUpload={this.handleUpload} files={uploadedFiles} file={length}/>
+              { !!result ?
+                  <Dashboard result={result}/>
+                : <Upload onUpload={this.handleUpload}/>
+              }
             </div>
           </div>
         </div>

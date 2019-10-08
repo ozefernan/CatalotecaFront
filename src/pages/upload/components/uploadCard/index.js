@@ -18,7 +18,7 @@ export default class uploadCard extends Component {
       return  <UploadMessage>
               <MdCloudUpload size={50} color="#ff6f5a" alt="Ícone de upload"/>
               <p>Solte o arquivo em qualquer lugar desta tela ou
-              <a href="#"> faça upload</a></p>
+              <a href> faça upload</a></p>
               </UploadMessage>
     }
 
@@ -37,8 +37,6 @@ export default class uploadCard extends Component {
 
   render() {
     const { onUpload } = this.props;
-    const { files } = this.props;
-    const { file } = this.props;
 
     return (
       <Styles>
@@ -67,12 +65,12 @@ export default class uploadCard extends Component {
                   ou do arquivo XML modelo
                 </p>
                 <p className="s-intrucoes-upload-descricao">
-                  <a href="#" title="Download planilha modelo">
+                  <a href title="Download planilha modelo">
                     Download planilha modelo
                   </a>
                 </p>
                 <p className="s-intrucoes-upload-descricao">
-                  <a href="#" title="Download XML modelo">
+                  <a href title="Download XML modelo">
                     Download XML modelo
                   </a>
                 </p>
@@ -105,13 +103,7 @@ export default class uploadCard extends Component {
                   <Card.Body>
                     <div className="d-flex flex-row">
                       <Col xs={12} className="justify-content-center">
-                          <Dropzone 
-                            onDrop={acceptedFiles => console.log(acceptedFiles)}
-                            onDropAccepted={onUpload} 
-                            file={file} 
-                            files={files}
-                            accept=""
-                          >
+                          <Dropzone accept="" onDropAccepted={onUpload}>
                             { ({ getRootProps, getInputProps, isDragActive, isDragReject }) =>
                               (
                               <DropContainer
@@ -120,7 +112,7 @@ export default class uploadCard extends Component {
                                 isDragReject={isDragReject}
                               >
                                 <input {...getInputProps()} />
-                                {this.renderDragMessage(isDragActive, isDragReject, file, files)}
+                                {this.renderDragMessage(isDragActive, isDragReject)}
                               </DropContainer>
                               )}
                           </Dropzone>
@@ -129,7 +121,7 @@ export default class uploadCard extends Component {
                     <Row>
                       <Col xs={12} className="text-center s-box-upload-conteudo-ajuda">
                         Precisa de ajuda?
-                        <a href="#" title="Entre em contato"> Entre em contato.</a>
+                        <a href title="Entre em contato"> Entre em contato.</a>
                       </Col>
                     </Row>
                   </Card.Body>
