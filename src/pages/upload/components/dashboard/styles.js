@@ -31,4 +31,13 @@ export const Styles = styled.div`
     margin: 0;
     background-color: #fff
   }
+
+  .table th {
+    font-size: 13px!important;
+  }
+
+  .table td, .table th {
+    padding: .30rem;
+    font-size: 13px!important;
+  }
 `;

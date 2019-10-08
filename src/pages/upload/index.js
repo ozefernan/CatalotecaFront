@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { uniqueId } from 'lodash';
-import filesize from 'filesize';
 import api from "../../shared/services/api";
 
 import { Styles } from './styles';
@@ -16,61 +14,25 @@ export default class upload extends Component {
   };
 
   handleUpload = files => {
-    /*this.setState ({
-      uploadedFiles: this.state.uploadedFiles.concat(uploadedFiles)
-    });*/
     files.forEach(this.processUpload);
   };
 
-  /*updateFile = (data) => {
-    this.setState({
-      uploadedFiles: this.state.uploadedFiles.map(uploadedFile => {
-        return data === uploadedFile.data
-          ? { ...uploadedFile, ...data }
-          : uploadedFile;
-      })
-    });
-  };*/
-
   processUpload = files => {
-
     const data = new FormData();
     data.append('file', files);
 
     api.post("upload", data, {
       headers: {
         'Content-Type': 'multipart/form-data'
-      }
-        /*onUploadProgress: e => {
-          const progress = parseInt(Math.round((e.loaded * 100) / e.total));
-
-          this.updateFile(uploadedFile.data, {
-            progress
-          });
-        }*/
-      })
+      }})
       .then(response => {
-        this.processCalculate(response);
-
+        console.log(response);
+        response = this.props;
       })
       .catch(error => {
         console.log(error)
-        /*this.updateFile(uploadedFile.id, {
-          error: true
-        });*/
       })
   };
-
-  processCalculate = response => {
-    api.post("similarity", response.data, {
-    })
-    .then(response => {
-      console.log(response);
-    })
-    .catch(error => {
-      console.log(error)
-    })
-  }
 
   render () {
     const { uploadedFiles } = this.state;
