@@ -11,7 +11,7 @@ export default function topbar() {
           <MdDehaze />
         </Button>
         <div className="d-md-none">
-          <a href="#" title="Acessar portal cataloteca" className="topbar-link-acesse">Portal</a>
+          <a href="/" title="Acessar portal cataloteca" className="topbar-link-acesse">Portal</a>
         </div>
         <div className="d-none d-md-block">
           <a href="#" title="" className="topbar-link-acesse">Acessar portal Cataloteca</a>

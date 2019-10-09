@@ -4,6 +4,7 @@ import { Button } from 'react-bootstrap';
 import logopequeno from '../../../../shared/images/logotipo.svg';
 import LogoWhite from '../../../../shared/images/logoWhite.svg';
 import { MdCloudUpload } from "react-icons/md";
+import { IoIosSquareOutline } from "react-icons/io";
 
 export default function sideBar() {
   return (
@@ -31,9 +32,24 @@ export default function sideBar() {
             </Button>
           </a>
         </li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li className="nav-item">
+          <a className="nav-link ativo" href="/upload" title="Upload de produtos">
+            {/*<IoIosSquareOutline className="sidebar-icon" size={20} color="#FFF" alt="Ícone de upload"/>*/}
+            <span className="sidebar-link">Dashboard</span>
+          </a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link ativo" href="/upload" title="Upload de produtos">
+            {/*<IoIosSquareOutline className="sidebar-icon" size={20} color="#FFF" alt="Ícone de upload"/>*/}
+            <span className="sidebar-link">Meus Produtos</span>
+          </a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link ativo" href="/upload" title="Upload de produtos">
+            {/*<IoIosSquareOutline className="sidebar-icon" size={20} color="#FFF" alt="Ícone de upload"/>*/}
+            <span className="sidebar-link">Registros de atividades</span>
+          </a>
+        </li>
       </ul>
     </Styles>
   );

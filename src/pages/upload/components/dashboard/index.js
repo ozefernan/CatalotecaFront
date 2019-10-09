@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import api from '../../../../shared/services/api'
+// import api from '../../../../shared/services/api'
 
 import { Container, Row, Col, Card, Table } from 'react-bootstrap';
 import { Styles } from './styles';
+import { MdDone, MdWarning } from "react-icons/md";
 
 
 export default class dashboard extends Component {
-  async componentDidMount() {
+  /*async componentDidMount() {
     const result = this.props.result;
     api.post("products/similarity", result, {
     })
@@ -16,7 +17,7 @@ export default class dashboard extends Component {
     .catch(error => {
       console.log(error)
     })
-  }
+  }*/
 
   render() {
     return (
@@ -79,11 +80,116 @@ export default class dashboard extends Component {
             </Row>
           </div>
           <div className="s-box-upload">
-            <Row>
+            <div className="s-uploads-cards mb-5">
+              <div className="card border-left-success h-100 py-2 mb-4">
+                <div className="card-body">
+                  <Row className="no-gutters align-items-center">
+                    <Col sm={0} className="text-align-left">
+                      <button className="btn btn-tag btn-success"><MdDone size={20}/></button>
+                    </Col>
+                    <Col xs mb={2} className="col-sm mb-sm-0 text-align-left margin-left-15">
+                      ABRACADEIRA TIPO AJUSTAVEL DIMENSAO 19-27 X 14 MM ACO CARBONO ZINCADO  RECARTILHADA / ROSCA SEM-FIM BRANCO
+                    </Col>
+                    <Col xs mb={2} className="col-sm mb-sm-0 text-align-left margin-left-20">
+                      ABRAC AJUST 19 27X14MM AC ZN
+                    </Col>
+                    <Col sm={0} className="align-items">
+                      <span className="barra"></span>
+                    </Col>
+                    <Col sm={1} className="text-align-center margin-right-left-20">
+                      Distância <br/>
+                      80
+                    </Col>
+                    <Col sm={1} className="text-align-center margin-right-left-20">
+                      Similaridade <br/>
+                      75,5 %
+                    </Col>
+                  </Row>
+                </div>
+              </div>
+              <div className="card border-left-success h-100 py-2 mb-4">
+                <div className="card-body">
+                  <Row className="no-gutters align-items-center">
+                    <Col sm={0} className="text-align-left">
+                      <button className="btn btn-tag btn-success"><MdDone size={20}/></button>
+                    </Col>
+                    <Col xs mb={2} className="col-sm mb-sm-0 text-align-left margin-left-15">
+                      ABRACADEIRA TIPO AJUSTAVEL DIMENSAO 19-27 X 14 MM ACO CARBONO ZINCADO  RECARTILHADA / ROSCA SEM-FIM BRANCO
+                    </Col>
+                    <Col xs mb={2} className="col-sm mb-sm-0 text-align-left margin-left-20">
+                      ABRAC AJUST 19 27X14MM AC ZN
+                    </Col>
+                    <Col sm={0} className="align-items">
+                      <span className="barra"></span>
+                    </Col>
+                    <Col sm={1} className="text-align-center margin-right-left-20">
+                      Distância <br/>
+                      80
+                    </Col>
+                    <Col sm={1} className="text-align-center margin-right-left-20">
+                      Similaridade <br/>
+                      75,5 %
+                    </Col>
+                  </Row>
+                </div>
+              </div>
+              <div className="card border-left-warning h-100 py-2 mb-4">
+                <div className="card-body">
+                  <Row className="no-gutters align-items-center">
+                    <Col sm={0} className="text-align-left">
+                      <button className="btn btn-tag btn-warning"><MdWarning size={20}/></button>
+                    </Col>
+                    <Col xs mb={2} className="col-sm mb-sm-0 text-align-left margin-left-15">
+                      ABRACADEIRA TIPO AJUSTAVEL DIMENSAO 19-27 X 14 MM ACO CARBONO ZINCADO  RECARTILHADA / ROSCA SEM-FIM BRANCO
+                    </Col>
+                    <Col xs mb={2} className="col-sm mb-sm-0 text-align-left margin-left-20">
+                      ABRAC AJUST 19 27X14MM AC ZN
+                    </Col>
+                    <Col sm={0} className="align-items">
+                      <span className="barra"></span>
+                    </Col>
+                    <Col sm={1} className="text-align-center margin-right-left-20">
+                      Distância <br/>
+                      80
+                    </Col>
+                    <Col sm={1} className="text-align-center margin-right-left-20">
+                      Similaridade <br/>
+                      75,5 %
+                    </Col>
+                  </Row>
+                </div>
+              </div>
+              <div className="card border-left-success h-100 py-2 mb-4">
+                <div className="card-body">
+                  <Row className="no-gutters align-items-center">
+                    <Col sm={0} className="text-align-left">
+                      <button className="btn btn-tag btn-success"><MdDone size={20}/></button>
+                    </Col>
+                    <Col xs mb={2} className="col-sm mb-sm-0 text-align-left margin-left-15">
+                      ABRACADEIRA TIPO AJUSTAVEL DIMENSAO 19-27 X 14 MM ACO CARBONO ZINCADO  RECARTILHADA / ROSCA SEM-FIM BRANCO
+                    </Col>
+                    <Col xs mb={2} className="col-sm mb-sm-0 text-align-left margin-left-20">
+                      ABRAC AJUST 19 27X14MM AC ZN
+                    </Col>
+                    <Col sm={0} className="align-items">
+                      <span className="barra"></span>
+                    </Col>
+                    <Col sm={1} className="text-align-center margin-right-left-20">
+                      Distância <br/>
+                      80
+                    </Col>
+                    <Col sm={1} className="text-align-center margin-right-left-20">
+                      Similaridade <br/>
+                      75,5 %
+                    </Col>
+                  </Row>
+                </div>
+              </div>
+            </div>
+            {/*<Row>
               <Col xs={12}>
                 <Card>
                   <Table responsive>
-                    {this.criatePrimaryTable}
                     <thead>
                       <tr>
                         <th>Id level</th>
@@ -99,41 +205,11 @@ export default class dashboard extends Component {
                         <td>ABRAC AJUST 19 27X14MM AC ZN</td>
                         <td>ABRACADEIRA TIPO AJUSTAVEL DIMENSAO 19-27 X 14 MM ACO CARBONO ZINCADO  RECARTILHADA / ROSCA SEM-FIM BRANCO</td>
                       </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>ABRAC U 70X100MMX2 1 2POL AC GALV</td>
-                        <td>ABRACADEIRA TIPO U DIMENSAO 70 X 100 MM X 2,1/2 POLEGADAS ACO CARBONO GALVANIZADO</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>ABRAC U 70X100MMX2 1 2POL AC GALV</td>
-                        <td>ABRACADEIRA TIPO U DIMENSAO 70 X 100 MM X 2,1/2 POLEGADAS ACO CARBONO GALVANIZADO</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>ABRAC U 70X100MMX2 1 2POL AC GALV</td>
-                        <td>ABRACADEIRA TIPO U DIMENSAO 70 X 100 MM X 2,1/2 POLEGADAS ACO CARBONO GALVANIZADO</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>ABRAC U 70X100MMX2 1 2POL AC GALV</td>
-                        <td>ABRACADEIRA TIPO U DIMENSAO 70 X 100 MM X 2,1/2 POLEGADAS ACO CARBONO GALVANIZADO</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>ABRAC U 70X100MMX2 1 2POL AC GALV</td>
-                        <td>ABRACADEIRA TIPO U DIMENSAO 70 X 100 MM X 2,1/2 POLEGADAS ACO CARBONO GALVANIZADO</td>
-                      </tr>
                     </tbody>
                   </Table>
                 </Card>
               </Col>
-            </Row>
+            </Row>*/}
           </div>
         </Container>
       </Styles>

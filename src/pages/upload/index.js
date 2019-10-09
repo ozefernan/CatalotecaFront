@@ -56,7 +56,7 @@ export default class upload extends Component {
           <div id="content-wrapper" className="d-flex flex-column">
             <div is="content">
               <Topbar />
-              { !!result ?
+              { !result ?
                   <Dashboard result={result}/>
                 : <Upload onUpload={this.handleUpload}/>
               }

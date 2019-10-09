@@ -17,7 +17,6 @@ export default createGlobalStyle`
     font-weight: 400;
     line-height: 1.5;
     color: #858796;
-    text-align: left;
     background-color: #fff;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;

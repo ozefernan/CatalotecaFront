@@ -114,18 +114,18 @@ export const Styles = styled.div`
     line-height: 1.5;
     border-radius: .35rem;
     transition: color .15s;
-    }
+  }
 
-    .sidebar-link {
-      font-size: 14px;
-    }
+  .sidebar-link {
+    font-size: 14px;
+  }
 
 
 
-    #wrapper #content-wrapper {
-      background-color: #f8f9fc;
-      width: 100%;
-      overflow-x: hidden;
+  #wrapper #content-wrapper {
+    background-color: #f8f9fc;
+    width: 100%;
+    overflow-x: hidden;
   }
 
   .flex-column {
@@ -161,5 +161,21 @@ export const Styles = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: .5rem 1rem;
+  }
+
+  .sidebar-dark .nav-item .nav-link {
+    color: rgba(255,255,255,.8);
+    transition-duration: 0.5s;
+  }
+
+  .sidebar-dark .nav-item .nav-link:hover {
+    color: rgba(255, 111, 90,.8);
+  }
+
+  .sidebar .nav-item .nav-link {
+    display: block;
+    text-align: left;
+    padding: 1rem;
+    width: 14rem;
   }
 `;

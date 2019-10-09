@@ -58,4 +58,8 @@ export const Styles = styled.div`
     color: #F7582C !important;
   }
 
+  .nav {
+    flex-wrap: nowrap !important;
+  }
+
 `;
