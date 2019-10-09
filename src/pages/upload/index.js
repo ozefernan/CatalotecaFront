@@ -13,7 +13,7 @@ export default class upload extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      result: 0
+      result: null
     }
   }
 
@@ -56,9 +56,9 @@ export default class upload extends Component {
           <div id="content-wrapper" className="d-flex flex-column">
             <div is="content">
               <Topbar />
-              { !!result ?
-                  <Dashboard result={result}/>
-                : <Upload onUpload={this.handleUpload}/>
+              { result 
+                  ? <Dashboard result={result}/>
+                  : <Upload onUpload={this.handleUpload}/>
               }
             </div>
           </div>

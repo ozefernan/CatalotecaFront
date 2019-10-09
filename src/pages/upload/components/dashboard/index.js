@@ -1,17 +1,26 @@
 import React, { Component } from 'react';
-import api from '../../../../shared/services/api'
 
-import { Container, Row, Col, Card, Table } from 'react-bootstrap';
+import { Container, Card, Col, Row } from 'react-bootstrap';
+
+import api from '../../../../shared/services/api'
+import ComparisonCard from './ComparisonCard';
 import { Styles } from './styles';
 
-
 export default class dashboard extends Component {
+
+  constructor(props, context) {
+    super(props, context);
+    this.state = {
+      response: null
+    };
+  }
+  
   async componentDidMount() {
     const { result } = this.props;
     api.post(`products/similarity/${result.uid}`, {}, {
     })
     .then(response => {
-      console.log(response)
+      this.setState({ response });
     })
     .catch(error => {
       console.log(error)
@@ -19,6 +28,13 @@ export default class dashboard extends Component {
   }
 
   render() {
+    const { response } = this.state;
+    
+    console.log("logloglogloglog");
+    console.log(response);
+
+    if(response && response.data)
+      console.log(response.data);
     return (
       <Styles>
         <Container fluid>
@@ -39,7 +55,7 @@ export default class dashboard extends Component {
               <Col sm={3}>
                 <Card>
                   <Card.Body>
-                      243
+                      {response && response.data ? response.data.length : 0}
                   </Card.Body>
                   <Card.Header>
                       Lidos
@@ -49,7 +65,7 @@ export default class dashboard extends Component {
               <Col sm={3}>
                 <Card>
                   <Card.Body>
-                      200
+                    {response && response.data ? response.data.filter(el => el.results.filter(reg => reg.similarity > 75).length > 0).length : 0}
                   </Card.Body>
                   <Card.Header>
                       Aceitos
@@ -59,7 +75,7 @@ export default class dashboard extends Component {
               <Col sm={3}>
                 <Card>
                   <Card.Body>
-                      13
+                      0
                   </Card.Body>
                   <Card.Header>
                       Duplicados
@@ -69,7 +85,7 @@ export default class dashboard extends Component {
               <Col sm={3}>
                 <Card>
                   <Card.Body>
-                      40
+                      0
                   </Card.Body>
                   <Card.Header>
                       Rejeitados
@@ -79,61 +95,9 @@ export default class dashboard extends Component {
             </Row>
           </div>
           <div className="s-box-upload">
-            <Row>
-              <Col xs={12}>
-                <Card>
-                  <Table responsive>
-                    {this.criatePrimaryTable}
-                    <thead>
-                      <tr>
-                        <th>Id level</th>
-                        <th>Id Produto</th>
-                        <th>Name</th>
-                        <th>Descrição</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>ABRAC AJUST 19 27X14MM AC ZN</td>
-                        <td>ABRACADEIRA TIPO AJUSTAVEL DIMENSAO 19-27 X 14 MM ACO CARBONO ZINCADO  RECARTILHADA / ROSCA SEM-FIM BRANCO</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>ABRAC U 70X100MMX2 1 2POL AC GALV</td>
-                        <td>ABRACADEIRA TIPO U DIMENSAO 70 X 100 MM X 2,1/2 POLEGADAS ACO CARBONO GALVANIZADO</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>ABRAC U 70X100MMX2 1 2POL AC GALV</td>
-                        <td>ABRACADEIRA TIPO U DIMENSAO 70 X 100 MM X 2,1/2 POLEGADAS ACO CARBONO GALVANIZADO</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>ABRAC U 70X100MMX2 1 2POL AC GALV</td>
-                        <td>ABRACADEIRA TIPO U DIMENSAO 70 X 100 MM X 2,1/2 POLEGADAS ACO CARBONO GALVANIZADO</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>ABRAC U 70X100MMX2 1 2POL AC GALV</td>
-                        <td>ABRACADEIRA TIPO U DIMENSAO 70 X 100 MM X 2,1/2 POLEGADAS ACO CARBONO GALVANIZADO</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>ABRAC U 70X100MMX2 1 2POL AC GALV</td>
-                        <td>ABRACADEIRA TIPO U DIMENSAO 70 X 100 MM X 2,1/2 POLEGADAS ACO CARBONO GALVANIZADO</td>
-                      </tr>
-                    </tbody>
-                  </Table>
-                </Card>
-              </Col>
-            </Row>
+            <div className="s-uploads-cards mb-5">
+              { response && response.data && response.data.map(reg => <ComparisonCard key={reg.reference} register={reg} />) }
+            </div>
           </div>
         </Container>
       </Styles>
