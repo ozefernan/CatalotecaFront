@@ -14,7 +14,7 @@ function ComparisonCard(props) {
         return <SuccessComparisonCard register={_.maxBy(successRegisters, (reg) => reg.similarity)} reference={register.reference} />
     }
     
-    return <FailureComparisonCard register={_.maxBy(register.results, (reg) => reg.distance)} reference={register.reference} />
+    return <FailureComparisonCard register={_.maxBy(register.results, (reg) => reg.similarity)} reference={register.reference} />
     
 }
 
