@@ -29,6 +29,10 @@ function SuccessComparisonCard(props) {
                         Similaridade <br/>
                         { register.similarity } %
                     </Col>
+                    <Col sm={1} className="text-align-center margin-right-left-20">
+                        &Iacute;ndice&nbsp;Jaccard <br/>
+                        { register.jaccardIndex } %
+                    </Col>
                 </Row>
             </div>
         </div>
