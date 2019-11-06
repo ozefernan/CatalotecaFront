@@ -14,7 +14,7 @@ export default class dashboard extends Component {
       response: null
     };
   }
-  
+
   async componentDidMount() {
     const { result } = this.props;
     api.post(`products/similarity/${result.id}`, {}, {
@@ -29,7 +29,7 @@ export default class dashboard extends Component {
 
   render() {
     const { response } = this.state;
-    
+
     console.log("logloglogloglog");
     console.log(response);
 
