@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import { Row, Col, Card, Accordion, Form, Button } from 'react-bootstrap';
 import { MdWarning, MdPlaylistAddCheck, MdExpandMore, MdCompareArrows } from "react-icons/md";
 
-// function FailureComparisonCard(props) {
+import _ from 'lodash';
+
+import ComparisonRow from './ComparisonRow';
+
 export default class FailureComparisonCard extends Component {
   constructor(props) {
     super();
@@ -47,8 +50,9 @@ export default class FailureComparisonCard extends Component {
   };
 
   render() {
-    const { register, reference } = this.props;
-
+    const { register } = this.props;
+    const matches = _.reverse(_.sortBy(register.results, r => r.similarity));
+    const bestMatch = _.first(matches);
 
     return (
       <Accordion defaultActiveKey="0">
@@ -59,10 +63,10 @@ export default class FailureComparisonCard extends Component {
                         <button className="btn btn-tag btn-warning"><MdWarning size={20}/></button>
                     </Col>
                     <Col xs mb={2} className="col-sm mb-sm-0 text-align-left margin-left-15">
-                        { reference }
+                        { register.reference }
                     </Col>
                     <Col xs mb={2} className="col-sm mb-sm-0 text-align-left margin-left-20">
-                        { register.target }
+                        { bestMatch.target }
                     </Col>
                     <Col sm={0} className="align-items">
                         <span className=""></span>
@@ -102,15 +106,15 @@ export default class FailureComparisonCard extends Component {
                     </Button>
                     <Col sm={1} className="text-align-center margin-right-left-20">
                         Distância <br/>
-                        { register.distance }
+                        { bestMatch.distance }
                     </Col>
                     <Col sm={1} className="text-align-center margin-right-left-20">
                         Similaridade <br/>
-                        { register.similarity } %
+                        { bestMatch.similarity } %
                     </Col>
                     <Col sm={1} className="text-align-center margin-right-left-20">
-                        &Iacute;ndice&nbsp;Jaccard <br/>
-                        { register.jaccardIndex } %
+                        Jaccard <br/>
+                        { bestMatch.jaccardIndex } %
                     </Col>
                     <Accordion.Toggle
                       as={Button}
@@ -128,37 +132,7 @@ export default class FailureComparisonCard extends Component {
             {/* ESTE COLLAPSE DEVE FICAR DENTRO DE UM MAP DAS TOP OPÇÕES POR REGISTRO */}
             <Accordion.Collapse eventKey="1" as={Card.Footer}>
               <Card.Footer className="card-footer">
-                <Row className="no-gutters align-items-center">
-                  <Col sm={0} className="text-align-left">
-                    <MdCompareArrows size={32} />
-                  </Col>
-                  <Col
-                    sm={2}
-                    className="col-sm mb-sm-0 text-align-left margin-left-15"
-                  >
-                    {/*ABRAC AJUST 19 27X14MM AC ZN*/}
-                  </Col>
-                  <Col
-                    mb={2}
-                    className="col-sm mb-sm-0 text-align-left margin-left-20"
-                  >
-                    {/*ABRACADEIRA TIPO AJUSTAVEL DIMENSAO 19-27 X 14 MM ACO
-                    CARBONO ZINCADO RECARTILHADA / ROSCA SEM-FIM BRANCO*/}
-                  </Col>
-                  <Col sm={0} className="align-items" />
-                  <Col sm={1} className="text-align-center">
-                    Distância <br />
-                    {/*123*/}
-                  </Col>
-                  <Col sm={1} className="text-align-center">
-                    Similaridade <br />
-                    {/*34 %*/}
-                  </Col>
-                  <Col sm={1} className="text-align-center">
-                    &Iacute;ndice&nbsp;Jaccard <br />
-                    {/*56 %*/}
-                  </Col>
-                </Row>
+                <ComparisonRow results={matches}/>
                 <hr />
               </Card.Footer>
             </Accordion.Collapse>
