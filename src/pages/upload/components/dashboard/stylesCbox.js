@@ -38,7 +38,7 @@ export const Styles = styled.div`
   }
   
   .react-autosuggest__input {
-    width: 240px;
+    width: 100%;
     height: 30px;
     padding: 10px 20px;
     font-family: Helvetica, sans-serif;
