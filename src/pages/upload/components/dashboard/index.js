@@ -17,7 +17,7 @@ export default class dashboard extends Component {
 
   async componentDidMount() {
     const { result } = this.props;
-    api.post(`products/similarity/${result.id}`, {}, {
+    api.post(`similarity/${result.id}`, {}, {
     })
     .then(response => {
       this.setState({ response });
