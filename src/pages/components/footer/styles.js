@@ -2,13 +2,13 @@ import styled from 'styled-components';
 
 export const Styles = styled.div`
   footer {
-      padding: 4.5em 0;
-      background: #f9f9f9;
-      border-top: 1px solid #e6ecf1;
+    padding: 4.5em 0;
+    background: #f9f9f9;
+    border-top: 1px solid #e6ecf1;
   }
 
   a {
-    color: #9091AF;
+    color: #9091af;
     text-decoration: none;
   }
 
@@ -21,7 +21,7 @@ export const Styles = styled.div`
   }
 
   footer a {
-    color: #9091AF;
+    color: #9091af;
   }
 
   footer .footer-dados-contato {

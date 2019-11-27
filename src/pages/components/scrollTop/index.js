@@ -1,6 +1,6 @@
 import React from 'react';
+import { MdKeyboardArrowUp } from 'react-icons/md';
 import { Styles } from './styles';
-import { MdKeyboardArrowUp } from 'react-icons/md'
 
 export default function scrollTop() {
   return (

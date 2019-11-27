@@ -1,3 +1,4 @@
+/* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 import { Styles } from './styles';
 import Sidebar from './components/sideBar';
@@ -21,5 +22,5 @@ export default class HomeAdmin extends React.Component {
         <Scrolltop />
       </Styles>
     );
-  }
+  };
 }

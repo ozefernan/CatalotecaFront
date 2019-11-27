@@ -1,5 +1,6 @@
+/* eslint-disable no-console */
 import React, { Component } from 'react';
-import api from "../../shared/services/api";
+import api from '../../shared/services/api';
 
 import { Styles } from './styles';
 import Sidebar from '../homeAdmin/components/sideBar';
@@ -13,20 +14,19 @@ export default class upload extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      result: null
-    }
+      result: null,
+    };
   }
 
-  async componentDidMount() {
-  }
+  // async componentDidMount() {}
 
-  handleUpload = (files) => {
+  handleUpload = files => {
     files.forEach(this.processUpload);
   };
 
-  updateResult = (data) => {
+  updateResult = data => {
     this.setState({
-      result: data
+      result: data,
     });
   };
 
@@ -34,19 +34,21 @@ export default class upload extends Component {
     const data = new FormData();
     data.append('file', file);
 
-    api.post("upload", data, {
-      headers: {
-        'Content-Type': 'multipart/form-data'
-      }})
+    api
+      .post('upload', data, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      })
       .then(response => {
-        this.updateResult(response.data)
+        this.updateResult(response.data);
       })
       .catch(error => {
-        console.log(error)
-      })
+        console.log(error);
+      });
   };
 
-  render () {
+  render() {
     const { result } = this.state;
 
     return (
@@ -56,10 +58,11 @@ export default class upload extends Component {
           <div id="content-wrapper" className="d-flex flex-column">
             <div is="content">
               <Topbar />
-              { result 
-                  ? <Dashboard result={result}/>
-                  : <Upload onUpload={this.handleUpload}/>
-              }
+              {result ? (
+                <Dashboard result={result} />
+              ) : (
+                <Upload onUpload={this.handleUpload} />
+              )}
             </div>
           </div>
         </div>

@@ -7,24 +7,25 @@ export const Styles = styled.div`
   }
 
   .flex-column {
-    flex-direction: column!important;
+    flex-direction: column !important;
   }
 
   .d-flex {
-    display: flex!important;
+    display: flex !important;
   }
 
   .topbar {
     height: 4.375rem;
-    box-shadow: 0 0 7px -4px rgba(0,0,0,.5);
+    box-shadow: 0 0 7px -4px rgba(0, 0, 0, 0.5);
   }
 
-  .mb-4, .my-4 {
-    margin-bottom: 1.5rem!important;
+  .mb-4,
+  .my-4 {
+    margin-bottom: 1.5rem !important;
   }
 
   .bg-white {
-    background-color: #fff!important;
+    background-color: #fff !important;
   }
 
   .navbar-expand {
@@ -38,7 +39,7 @@ export const Styles = styled.div`
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
   }
 
   .topbar #sidebarToggleTop {
@@ -50,12 +51,13 @@ export const Styles = styled.div`
     color: #ff6f5a;
   }
 
-  .mr-3, .mx-3 {
-    margin-right: 1rem!important;
+  .mr-3,
+  .mx-3 {
+    margin-right: 1rem !important;
   }
 
   .rounded-circle {
-    border-radius: 50%!important;
+    border-radius: 50% !important;
   }
 
   .btn-link {
@@ -73,14 +75,14 @@ export const Styles = styled.div`
     user-select: none;
     background-color: transparent;
     border: 1px solid transparent;
-    padding: .375rem .75rem;
+    padding: 0.375rem 0.75rem;
     font-size: 1rem;
     line-height: 1.5;
-    border-radius: .35rem;
-    transition: color .15s
+    border-radius: 0.35rem;
+    transition: color 0.15s;
   }
 
   .topbar-link-acesse {
-    padding-left: .7em;
+    padding-left: 0.7em;
   }
 `;

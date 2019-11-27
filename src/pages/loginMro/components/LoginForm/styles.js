@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
 export const Styles = styled.div`
-  p, a, li {
-    font-family: "Rubik",sans-serif;
+  p,
+  a,
+  li {
+    font-family: 'Rubik', sans-serif;
   }
 
   .s-padrao {
@@ -14,11 +16,13 @@ export const Styles = styled.div`
     padding: 0;
   }
 
-  .s-login .btn-lg, .s-login .btn-group-lg > .btn {
+  .s-login .btn-lg,
+  .s-login .btn-group-lg > .btn {
     min-width: 200px;
   }
 
-  .btn.btn-lg, .btn-group-lg >.btn {
+  .btn.btn-lg,
+  .btn-group-lg > .btn {
     padding-left: 1.929em !important;
     padding-right: 1.929em !important;
     line-height: 1.8em;
@@ -32,8 +36,8 @@ export const Styles = styled.div`
 
   .btn-default {
     color: #fff;
-    background-color: #FF6F5A;
-    border-color: #F7582C;
+    background-color: #ff6f5a;
+    border-color: #f7582c;
   }
 
   .s-login .traco-texto {
@@ -44,7 +48,7 @@ export const Styles = styled.div`
   }
 
   .s-login .item-mro .traco-texto:before {
-    content: "";
+    content: '';
     position: absolute;
     display: block;
     width: 45%;
@@ -56,7 +60,7 @@ export const Styles = styled.div`
   }
 
   .s-login .item-mro .traco-texto:after {
-    content: "";
+    content: '';
     position: absolute;
     display: block;
     width: 45%;
@@ -67,7 +71,7 @@ export const Styles = styled.div`
   }
 
   .s-login .item-mro .b-item-mro-cadastre-se-txt-chamada-cadastro {
-    padding-top: .9em;
+    padding-top: 0.9em;
   }
 
   .h3 {
@@ -76,7 +80,7 @@ export const Styles = styled.div`
     font-family: inherit;
     font-weight: 500;
     line-height: 1.1;
-    color: #22144A;
+    color: #22144a;
   }
 
   .h4 {
@@ -85,7 +89,7 @@ export const Styles = styled.div`
     font-family: inherit;
     font-weight: 500;
     line-height: 1.1;
-    color: #22144A;
+    color: #22144a;
   }
 
   .form {
@@ -94,9 +98,9 @@ export const Styles = styled.div`
 
   label {
     display: inline-block;
-    padding-bottom: .8em;
+    padding-bottom: 0.8em;
     font-weight: 600;
-    color: #22144A;
+    color: #22144a;
     margin-bottom: 5px !important;
   }
 
@@ -127,7 +131,7 @@ export const Styles = styled.div`
     min-height: 21px;
     margin-bottom: 0;
     font-size: 14px;
-    color: #9091AF;
+    color: #9091af;
     font-weight: 400;
     cursor: pointer;
   }
@@ -142,22 +146,22 @@ export const Styles = styled.div`
 
   .btn.btn-link {
     padding: 0;
-    color: #FF6F5A;
+    color: #ff6f5a;
     font-size: 14px !important;
   }
 
   .btn.btn-outline {
     background-color: transparent;
     color: inherit;
-    transition: all .5s;
+    transition: all 0.5s;
   }
 
   .btn.btn-outline.btn-default {
-    border-color: #F7582C !important;
+    border-color: #f7582c !important;
   }
 
   .s-login .b-item-distribuidor-cadastre-se .traco-texto:before {
-    content: "";
+    content: '';
     position: absolute;
     display: block;
     width: 18%;
@@ -169,7 +173,7 @@ export const Styles = styled.div`
   }
 
   .s-login .b-item-distribuidor-cadastre-se .traco-texto:after {
-    content: "";
+    content: '';
     position: absolute;
     display: block;
     width: 18%;
@@ -184,11 +188,13 @@ export const Styles = styled.div`
     padding-bottom: 1.5em;
   }
 
-  .s-login .btn-lg, .s-login .btn-group-lg > .btn {
+  .s-login .btn-lg,
+  .s-login .btn-group-lg > .btn {
     min-width: 200px;
   }
 
-  .btn.btn-lg, .btn-group-lg >.btn {
+  .btn.btn-lg,
+  .btn-group-lg > .btn {
     padding-left: 1.929em;
     padding-right: 1.929em;
     line-height: 1.8em;

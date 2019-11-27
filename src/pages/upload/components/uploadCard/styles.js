@@ -9,7 +9,7 @@ const dragReject = css`
 `;
 
 export const DropContainer = styled.div.attrs({
-  className: "dropzone"
+  className: 'dropzone',
 })`
   padding: 4em 0;
   border: dashed 1px #ff6f5a;
@@ -25,12 +25,12 @@ const messageColors = {
   default: '#999',
   error: '#e57878',
   success: '#13f42d',
-}
+};
 
 export const UploadMessage = styled.div`
   display: flex;
   flex-direction: column;
-  color: ${props => messageColors[props.type || "default"]};
+  color: ${props => messageColors[props.type || 'default']};
   justify-content: center;
   align-items: center;
   padding: 15px 0;
@@ -41,13 +41,15 @@ export const Styles = styled.div`
     padding-bottom: 5em;
   }
 
-  .container, .container-fluid {
+  .container,
+  .container-fluid {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
 
-  .mb-4, .my-4 {
-    margin-bottom: 1.5rem!important;
+  .mb-4,
+  .my-4 {
+    margin-bottom: 1.5rem !important;
   }
 
   p {
@@ -65,7 +67,6 @@ export const Styles = styled.div`
     border-style: none;
   }
 
-
   .s-instrucoes-upload .s-instrucoes-upload-numero {
     color: #22144a;
     font-size: 23px;
@@ -82,7 +83,7 @@ export const Styles = styled.div`
   }
 
   .s-instrucoes-upload .s-intrucoes-upload-descricao {
-    font-size: .8em;
+    font-size: 0.8em;
     margin-top: 10px;
     margin-bottom: 0;
   }
@@ -104,7 +105,7 @@ export const Styles = styled.div`
 
   .s-box-upload .card-body .s-box-upload-conteudo-ajuda {
     margin-top: 1.5em;
-    font-size: .8em;
+    font-size: 0.8em;
   }
 
   .s-box-upload p {
@@ -112,18 +113,18 @@ export const Styles = styled.div`
   }
 
   .text-center {
-    text-align: center!important;
+    text-align: center !important;
   }
 
   .flex-row {
-    flex-direction: row!important;
+    flex-direction: row !important;
   }
 
   .d-flex {
-    display: flex!important;
+    display: flex !important;
   }
 
   .justify-content-center {
-    justify-content: center!important;
+    justify-content: center !important;
   }
 `;

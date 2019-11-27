@@ -2,8 +2,12 @@ import styled from 'styled-components';
 
 export const Styles = styled.div`
   .s-login {
-    background: rgb(73,67,180);
-    background: linear-gradient(190deg, rgba(73,67,180,1) 27%, rgba(34,20,74,1) 100%);
+    background: rgb(73, 67, 180);
+    background: linear-gradient(
+      190deg,
+      rgba(73, 67, 180, 1) 27%,
+      rgba(34, 20, 74, 1) 100%
+    );
   }
 
   .container {
@@ -18,7 +22,8 @@ export const Styles = styled.div`
     margin-bottom: 0;
   }
 
-  form, .form-group {
+  form,
+  .form-group {
     width: 400px;
     background: #fff;
     padding: 30px;
@@ -61,7 +66,7 @@ export const Styles = styled.div`
 
   input:focus {
     outline: none !important;
-    border:1px solid #F7582C;
+    border: 1px solid #f7582c;
     background-color: #f9f9f9;
     box-shadow: none;
   }
@@ -83,11 +88,12 @@ export const Styles = styled.div`
   }
 
   .button {
-  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2), 0 5px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2),
+      0 5px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
   .button:hover {
-    background-color: #F7582C; /* Green */
+    background-color: #f7582c; /* Green */
     color: white;
   }
 
