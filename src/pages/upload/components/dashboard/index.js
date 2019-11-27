@@ -17,7 +17,7 @@ export default class dashboard extends Component {
 
   async componentDidMount() {
     const { result } = this.props;
-    api.post(`products/similarity/${result.id}`, {}, {
+    api.post(`similarity/${result.id}`, {}, {
     })
     .then(response => {
       this.setState({ response });
@@ -29,12 +29,16 @@ export default class dashboard extends Component {
 
   render() {
     const { response } = this.state;
+    let qt = 0;
+    let qt_accept = 0;
+    let qt_reject = 0;
 
-    console.log("logloglogloglog");
-    console.log(response);
-
-    if(response && response.data)
+    if(response && response.data) {
       console.log(response.data);
+      qt = response.data.length;
+      qt_accept = response.data.filter(el => el.matched).length;
+      qt_reject = qt - qt_accept
+    }
     return (
       <Styles>
         <Container fluid>
@@ -55,7 +59,7 @@ export default class dashboard extends Component {
               <Col sm={3}>
                 <Card>
                   <Card.Body>
-                      {response && response.data ? response.data.length : 0}
+                      {qt}
                   </Card.Body>
                   <Card.Header>
                       Lidos
@@ -65,7 +69,7 @@ export default class dashboard extends Component {
               <Col sm={3}>
                 <Card>
                   <Card.Body>
-                    {response && response.data ? response.data.filter(el => el.results.filter(reg => reg.similarity > 75).length > 0).length : 0}
+                    {qt_accept}
                   </Card.Body>
                   <Card.Header>
                       Aceitos
@@ -85,7 +89,7 @@ export default class dashboard extends Component {
               <Col sm={3}>
                 <Card>
                   <Card.Body>
-                      0
+                      {qt_reject}
                   </Card.Body>
                   <Card.Header>
                       Rejeitados
