@@ -90,4 +90,15 @@ export const Styles = styled.div`
   .react-autosuggest__suggestion--highlighted {
     background-color: #ddd;
   }
+
+  /* ----------------------- BODY ----------------------- */
+
+  .container-fluid {
+    padding-bottom: 5em;
+  }
+
+  .container .container-fluid {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 `;

@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 export default createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
 
-/*---------------------------------------------*/
+/*---------------------------------------------
 
 body {
   margin: 0 !important;
@@ -119,7 +119,7 @@ textarea {
   border: 1px solid #ececec;
   border-radius:  6px;
   background: #f9f9f9;
-  /*@include transition(.3s);*/
+  @include transition(.3s);
 
   &:focus {
     border: 1px solid #FF6F5A;
@@ -133,9 +133,9 @@ select {
   color: #9091AF!important;
 }
 
+*/
 
-
-/*---------------------------------------------
+/*---------------------------------------------*/
 
 
 * {
@@ -179,6 +179,4 @@ select {
     padding-bottom: .6em;
     font-weight: 500;
   }
-
-  */
 `;

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './pages/home';
 import login from './pages/login';
@@ -6,7 +6,6 @@ import loginMro from './pages/loginMro';
 import HomeAdmin from './pages/homeAdmin';
 import Upload from './pages/upload';
 import Dashboard from './pages/upload/components/dashboard';
-
 
 const Routes = () => (
   <BrowserRouter>
@@ -22,4 +21,3 @@ const Routes = () => (
 );
 
 export default Routes;
-
