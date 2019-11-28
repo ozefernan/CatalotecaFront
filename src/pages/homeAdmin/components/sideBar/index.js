@@ -2,10 +2,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import { MdCloudUpload } from 'react-icons/md';
-<<<<<<< HEAD
-// import { IoIosSquareOutline } from 'react-icons/io';
-=======
->>>>>>> master
 import { Styles } from './styles';
 import logopequeno from '../../../../shared/images/logotipo.svg';
 import LogoWhite from '../../../../shared/images/logoWhite.svg';
@@ -60,28 +56,15 @@ export default function sideBar() {
         <li className="nav-item">
           <a
             className="nav-link ativo"
-<<<<<<< HEAD
-            href="/registros"
-            title="Upload de produtos"
-=======
             href="/admin"
             title="Registros de atividades"
->>>>>>> master
           >
             {/* <IoIosSquareOutline className="sidebar-icon" size={20} color="#FFF" alt="Ícone de upload"/> */}
             <span className="sidebar-link">Registros de atividades</span>
           </a>
         </li>
         <li className="nav-item">
-<<<<<<< HEAD
-          <a
-            className="nav-link ativo"
-            href="/upload"
-            title="Upload de produtos"
-          >
-=======
           <a className="nav-link ativo" href="/upload" title="Dashboard">
->>>>>>> master
             {/* <IoIosSquareOutline className="sidebar-icon" size={20} color="#FFF" alt="Ícone de upload"/> */}
             <span className="sidebar-link">Dashboard</span>
           </a>

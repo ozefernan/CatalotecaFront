@@ -23,30 +23,7 @@ export const Styles = styled.div`
     }
   }
 
-<<<<<<< HEAD
-  .form-inline {
-    margin-bottom: 0;
-
-    .form-control {
-      width: 85% !important;
-      height: 47px;
-      padding: 6px 12px;
-      font-size: 14px;
-      line-height: 1.5;
-      border-radius: 6px;
-      color: #555;
-      background: #f9f9f9;
-      border: 1px solid #ececec;
-      display: inline-block;
-      vertical-align: middle;
-      box-shadow: none;
-    }
-  }
-
-  /*.form-control {
-=======
   .form-control {
->>>>>>> master
     width: 85% !important;
     height: 47px;
     padding: 6px 12px;
@@ -59,7 +36,7 @@ export const Styles = styled.div`
     display: inline-block;
     vertical-align: middle;
     box-shadow: none;
-  }*/
+  }
 
   .btn-search-form {
     margin-top: 0;

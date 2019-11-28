@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-/* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable react/prop-types */
-=======
 /* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-props-no-spreading */
->>>>>>> master
 import React, { Component } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { MdCloudUpload } from 'react-icons/md';

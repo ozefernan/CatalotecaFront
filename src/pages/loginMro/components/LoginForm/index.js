@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 /* eslint-disable jsx-a11y/label-has-associated-control */
->>>>>>> master
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
@@ -42,19 +39,12 @@ export default function LoginForm() {
                             />
                           </Form.Group>
                           <div className="checkbox">
-<<<<<<< HEAD
-                            <Form.Check
-                              type="checkbox"
-                              label="Lembrar meu login"
-                            />
-=======
                             <label type="checkbox">
                               <Form.Check
                                 type="checkbox"
                                 label="Lembrar meu login"
                               />
                             </label>
->>>>>>> master
                             <a
                               name="LembrarLogin"
                               className="btn btn-link pull-right no-padding-top no-margin-top"
