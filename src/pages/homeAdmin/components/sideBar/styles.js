@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 export const Styles = styled.div`
-  dl, ol, ul {
+  dl,
+  ol,
+  ul {
     margin-top: 0;
     margin-bottom: 1rem;
   }
@@ -26,17 +28,17 @@ export const Styles = styled.div`
 
   @media (min-width: 768px) {
     .sidebar {
-    width: 14rem!important;
+      width: 14rem !important;
     }
     .d-md-block {
-    display: block!important;
+      display: block !important;
     }
     .d-md-none {
-      display: none!important;
+      display: none !important;
     }
     .nav-item a .btn.btn-sidebar-upload .sidebar-icon {
       margin-bottom: 0;
-      margin-right: .9em;
+      margin-right: 0.9em;
     }
   }
 
@@ -56,29 +58,30 @@ export const Styles = styled.div`
     padding: 1.5rem 1rem;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: .05rem;
+    letter-spacing: 0.05rem;
     z-index: 1;
   }
 
   .align-items-center {
-    align-items: center!important;
+    align-items: center !important;
   }
 
   .text-center {
-    text-align: center!important;
+    text-align: center !important;
   }
 
   .justify-content-center {
-    justify-content: center!important;
+    justify-content: center !important;
   }
 
   .d-flex {
-    display: flex!important;
+    display: flex !important;
   }
 
-  .pt-3, .py-3 {
+  .pt-3,
+  .py-3 {
     width: 3em;
-    padding-top: 1rem!important;
+    padding-top: 1rem !important;
   }
 
   img {
@@ -91,7 +94,7 @@ export const Styles = styled.div`
   }
 
   .nav-item a .btn.btn-sidebar-upload {
-    font-size: .875em;
+    font-size: 0.875em;
   }
 
   .btn.btn-sidebar-upload {
@@ -109,18 +112,16 @@ export const Styles = styled.div`
     user-select: none;
     background-color: transparent;
     border: 1px solid transparent;
-    padding: .375rem .75rem;
+    padding: 0.375rem 0.75rem;
     font-size: 1rem;
     line-height: 1.5;
-    border-radius: .35rem;
-    transition: color .15s;
+    border-radius: 0.35rem;
+    transition: color 0.15s;
   }
 
   .sidebar-link {
     font-size: 14px;
   }
-
-
 
   #wrapper #content-wrapper {
     background-color: #f8f9fc;
@@ -129,24 +130,25 @@ export const Styles = styled.div`
   }
 
   .flex-column {
-    flex-direction: column!important;
+    flex-direction: column !important;
   }
 
   .d-flex {
-    display: flex!important;
+    display: flex !important;
   }
 
   .topbar {
     height: 4.375rem;
-    box-shadow: 0 0 7px -4px rgba(0,0,0,.5);
+    box-shadow: 0 0 7px -4px rgba(0, 0, 0, 0.5);
   }
 
-  .mb-4, .my-4 {
-    margin-bottom: 1.5rem!important;
+  .mb-4,
+  .my-4 {
+    margin-bottom: 1.5rem !important;
   }
 
   .bg-white {
-    background-color: #fff!important;
+    background-color: #fff !important;
   }
 
   .navbar-expand {
@@ -160,16 +162,16 @@ export const Styles = styled.div`
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
   }
 
   .sidebar-dark .nav-item .nav-link {
-    color: rgba(255,255,255,.8);
+    color: rgba(255, 255, 255, 0.8);
     transition-duration: 0.5s;
   }
 
   .sidebar-dark .nav-item .nav-link:hover {
-    color: rgba(255, 111, 90,.8);
+    color: rgba(255, 111, 90, 0.8);
   }
 
   .sidebar .nav-item .nav-link {

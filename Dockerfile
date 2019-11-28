@@ -1,7 +1,7 @@
 FROM node:8.16.2-stretch-slim
 
 COPY /src /app
-COPY package-lock.json package.json yarn.lock /app/
+COPY package.json yarn.lock /app/
 WORKDIR /app
 
 RUN yarn

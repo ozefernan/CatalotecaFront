@@ -6,9 +6,9 @@ export const Styles = styled.div`
   }
 
   #content-wrapper {
-      background-color: #f8f9fc;
-      width: 100%;
-      overflow-x: hidden;
+    background-color: #f8f9fc;
+    width: 100%;
+    overflow-x: hidden;
   }
 
   #content {

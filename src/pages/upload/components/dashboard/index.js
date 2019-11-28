@@ -1,30 +1,31 @@
+/* eslint-disable camelcase */
+/* eslint-disable react/prop-types */
 import React, { Component } from 'react';
 
 import { Container, Card, Col, Row } from 'react-bootstrap';
 
-import api from '../../../../shared/services/api'
+import api from '../../../../shared/services/api';
 import ComparisonCard from './ComparisonCard';
 import { Styles } from './styles';
 
 export default class dashboard extends Component {
-
   constructor(props, context) {
     super(props, context);
     this.state = {
-      response: null
+      response: null,
     };
   }
 
   async componentDidMount() {
     const { result } = this.props;
-    api.post(`similarity/${result.id}`, {}, {
-    })
-    .then(response => {
-      this.setState({ response });
-    })
-    .catch(error => {
-      console.log(error)
-    })
+    api
+      .post(`similarity/${result.id}`, {}, {})
+      .then(response => {
+        this.setState({ response });
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
 
   render() {
@@ -33,11 +34,11 @@ export default class dashboard extends Component {
     let qt_accept = 0;
     let qt_reject = 0;
 
-    if(response && response.data) {
+    if (response && response.data) {
       console.log(response.data);
       qt = response.data.length;
       qt_accept = response.data.filter(el => el.matched).length;
-      qt_reject = qt - qt_accept
+      qt_reject = qt - qt_accept;
     }
     return (
       <Styles>
@@ -58,53 +59,41 @@ export default class dashboard extends Component {
             <Row className="mb-5 s-card">
               <Col sm={3}>
                 <Card>
-                  <Card.Body>
-                      {qt}
-                  </Card.Body>
-                  <Card.Header>
-                      Lidos
-                  </Card.Header>
+                  <Card.Body>{qt}</Card.Body>
+                  <Card.Header>Lidos</Card.Header>
                 </Card>
               </Col>
               <Col sm={3}>
                 <Card>
-                  <Card.Body>
-                    {qt_accept}
-                  </Card.Body>
-                  <Card.Header>
-                      Aceitos
-                  </Card.Header>
+                  <Card.Body>{qt_accept}</Card.Body>
+                  <Card.Header>Aceitos</Card.Header>
                 </Card>
               </Col>
               <Col sm={3}>
                 <Card>
-                  <Card.Body>
-                      0
-                  </Card.Body>
-                  <Card.Header>
-                      Duplicados
-                  </Card.Header>
+                  <Card.Body>0</Card.Body>
+                  <Card.Header>Duplicados</Card.Header>
                 </Card>
               </Col>
               <Col sm={3}>
                 <Card>
-                  <Card.Body>
-                      {qt_reject}
-                  </Card.Body>
-                  <Card.Header>
-                      Rejeitados
-                  </Card.Header>
+                  <Card.Body>{qt_reject}</Card.Body>
+                  <Card.Header>Rejeitados</Card.Header>
                 </Card>
               </Col>
             </Row>
           </div>
           <div className="s-box-upload">
             <div className="s-uploads-cards mb-5">
-              { response && response.data && response.data.map(reg => <ComparisonCard key={reg.reference} register={reg} />) }
+              {response &&
+                response.data &&
+                response.data.map(reg => (
+                  <ComparisonCard key={reg.reference} register={reg} />
+                ))}
             </div>
           </div>
         </Container>
       </Styles>
-    )
+    );
   }
 }
