@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+<<<<<<< HEAD
 
 /*---------------------------------------------
 
@@ -145,13 +146,14 @@ select {
     box-sizing: border-box;
   }
 
+=======
+>>>>>>> master
   * {
     margin: 0;
     padding: 0;
     outline: 0;
     box-sizing: border-box;
   }
-
   body {
     margin: 0;
     font-family: Rubik,sans-serif;
@@ -163,15 +165,12 @@ select {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
   }
-
   html, body, #root {
     height: 100%;
   }
-
   ul {
     list-style: none;
   }
-
   h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     margin: 0!important;
     color: #22144a;

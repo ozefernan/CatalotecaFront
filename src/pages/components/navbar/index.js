@@ -27,7 +27,11 @@ export default function navbar() {
             </Col>
             <Col xs={12} sm={6} md={7}>
               <Nav.Item>
+<<<<<<< HEAD
                 <Form inline>
+=======
+                <Form inline method="get">
+>>>>>>> master
                   <FormControl
                     className="input"
                     type="text"

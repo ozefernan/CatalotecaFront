@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 /* eslint-disable react/prefer-stateless-function */
+=======
+>>>>>>> master
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -12,6 +15,7 @@ export default function App() {
       <GlobalStyle />
     </div>
   );
+<<<<<<< HEAD
 }
 
 /* class App extends Component {
@@ -26,3 +30,6 @@ export default function App() {
 }
 
 export default App; */
+=======
+}
+>>>>>>> master

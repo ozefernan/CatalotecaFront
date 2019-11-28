@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 /* eslint-disable no-console */
+=======
+>>>>>>> master
 /* eslint-disable camelcase */
 /* eslint-disable react/prop-types */
 import React, { Component } from 'react';

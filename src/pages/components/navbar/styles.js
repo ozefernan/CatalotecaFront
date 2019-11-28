@@ -23,6 +23,7 @@ export const Styles = styled.div`
     }
   }
 
+<<<<<<< HEAD
   .form-inline {
     margin-bottom: 0;
 
@@ -43,6 +44,9 @@ export const Styles = styled.div`
   }
 
   /*.form-control {
+=======
+  .form-control {
+>>>>>>> master
     width: 85% !important;
     height: 47px;
     padding: 6px 12px;
