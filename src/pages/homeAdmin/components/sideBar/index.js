@@ -1,7 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import { MdCloudUpload } from 'react-icons/md';
+import { MdCloudUpload, MdDashboard } from 'react-icons/md';
+import { AiOutlineMenuUnfold } from 'react-icons/ai';
 import { Styles } from './styles';
 import logopequeno from '../../../../shared/images/logotipo.svg';
 import LogoWhite from '../../../../shared/images/logoWhite.svg';
@@ -59,13 +60,13 @@ export default function sideBar() {
             href="/admin"
             title="Registros de atividades"
           >
-            {/* <IoIosSquareOutline className="sidebar-icon" size={20} color="#FFF" alt="Ícone de upload"/> */}
+            <AiOutlineMenuUnfold className="sidebar-icon" size={20} />
             <span className="sidebar-link">Registros de atividades</span>
           </a>
         </li>
         <li className="nav-item">
           <a className="nav-link ativo" href="/upload" title="Dashboard">
-            {/* <IoIosSquareOutline className="sidebar-icon" size={20} color="#FFF" alt="Ícone de upload"/> */}
+            <MdDashboard className="sidebar-icon" size={20} />
             <span className="sidebar-link">Dashboard</span>
           </a>
         </li>

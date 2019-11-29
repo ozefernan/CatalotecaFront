@@ -15,6 +15,10 @@ export const Styles = styled.div`
 
     animation-duration: 500ms;
     animation-delay: 250ms;
+
+    -webkit-box-shadow: 0px 0px 22px 6px rgba(0, 0, 0, 0.07);
+    -moz-box-shadow: 0px 0px 22px 6px rgba(0, 0, 0, 0.07);
+    box-shadow: 0px 0px 22px 6px rgba(0, 0, 0, 0.07);
   }
 
   .s-card .btn {

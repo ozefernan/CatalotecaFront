@@ -17,13 +17,34 @@ export const Styles = styled.div`
     height: 100%;
   }
 
+  /* flexbox da Nabar */
+  .flex-direction {
+    flex-direction: row;
+  }
+
+  .item {
+    flex: 1;
+  }
+
+  /* -------------------- */
+
   .sidebar-default {
-    background-color: #22144a;
+    background: rgb(69, 63, 180);
+    background: radial-gradient(
+      circle,
+      rgba(69, 63, 180, 1) 20%,
+      rgba(54, 43, 138, 1) 75%,
+      rgba(55, 20, 148, 1) 100%
+    );
   }
 
   .sidebar {
     width: 6.5rem;
     min-height: 100vh;
+  }
+
+  .sidebar-icon {
+    margin-right: 10px;
   }
 
   @media (min-width: 768px) {

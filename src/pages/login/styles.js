@@ -36,7 +36,7 @@ export const Styles = styled.div`
 
   img {
     width: 300px;
-    margin: 10px 0 40px;
+    margin: 10px 0 10px;
     padding-top: 20px;
     padding-bottom: 20px;
   }
@@ -52,7 +52,7 @@ export const Styles = styled.div`
     flex: 1;
     height: 46px;
     margin-bottom: 20px;
-    padding: 0 20px;
+    padding: 10px 20px;
     color: #777;
     background-color: #f9f9f9;
     font-size: 15px;
@@ -109,5 +109,13 @@ export const Styles = styled.div`
     font-weight: bold;
     color: #333 !important;
     text-decoration: none;
+  }
+
+  .flex-direction {
+    flex-direction: row;
+  }
+
+  .item {
+    flex: 1;
   }
 `;

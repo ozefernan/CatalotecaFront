@@ -15,8 +15,10 @@ export const Styles = styled.div`
   }
 
   .topbar {
-    height: 4.375rem;
-    box-shadow: 0 0 7px -4px rgba(0, 0, 0, 0.5);
+    height: 4rem;
+    -webkit-box-shadow: 0px 0px 22px 6px rgba(0, 0, 0, 0.07);
+    -moz-box-shadow: 0px 0px 22px 6px rgba(0, 0, 0, 0.07);
+    box-shadow: 0px 0px 22px 6px rgba(0, 0, 0, 0.07);
   }
 
   .mb-4,
@@ -82,7 +84,31 @@ export const Styles = styled.div`
     transition: color 0.15s;
   }
 
-  .topbar-link-acesse {
-    padding-left: 0.7em;
+  .flex-direction {
+    flex-direction: row;
+  }
+
+  .item {
+    flex: 1;
+  }
+
+  img {
+    border-radius: 50%;
+    width: 55px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  p {
+    font-size: 14px;
+    margin-top: 16px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: black;
+  }
+
+  .inline {
+    margin-left: 10px;
+    margin-right: 10px;
   }
 `;
